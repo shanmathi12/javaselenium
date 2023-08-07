@@ -2,20 +2,40 @@ package com.selenium.basis;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class LocatorsXpathEx {
-
+	
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
 		
-		WebDriver driver = (WebDriver) new ChromeDriver();
+		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://www.google.com/");
 		
 		driver.manage().window().maximize();
 		
-		driver.findElement(By.xpath("//textarea[@id='APjFgb']")).sendKeys("Learning Xpath");
+		/*Syntax for XPath
+		//tagname[@attribute='value']
+		 * */
+		 
+		//driver.findElement(By.xpath("//textarea[@id='APjFqb']")).sendKeys("Learning XPath");
+		
+		driver.findElement(By.xpath("//textarea[@title='Search']")).sendKeys("Using XPath title");
+		
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//textarea[contains(@id,'APjF')]")).clear();
+		
+		Thread.sleep(2000);
+		
+		//driver.findElement(By.xpath("//a[text()='Images']")).click();
+		
+		driver.findElement(By.xpath("//a[contains(text(),'Imag')]")).click();
+		
+
+		
 
 	}
 
