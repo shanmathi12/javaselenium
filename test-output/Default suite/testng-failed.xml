@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testNG.CrossBrowserTesting">
+      <class name="com.testNG.ReadExcelPractice">
         <methods>
-          <include name="verifyTitle"/>
-          <include name="closeBrowsers"/>
-          <include name="launchBrowser"/>
+          <include name="testdata"/>
         </methods>
-      </class> <!-- com.testNG.CrossBrowserTesting -->
+      </class> <!-- com.testNG.ReadExcelPractice -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
