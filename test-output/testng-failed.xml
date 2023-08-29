@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testNG.FileUploadUsingTestNG">
+      <class name="com.testNG.CrossBrowserTesting">
         <methods>
-          <include name="fileUpload"/>
+          <include name="verifyTitle"/>
+          <include name="closeBrowsers"/>
+          <include name="launchBrowser"/>
         </methods>
-      </class> <!-- com.testNG.FileUploadUsingTestNG -->
+      </class> <!-- com.testNG.CrossBrowserTesting -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
